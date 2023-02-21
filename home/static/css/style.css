@@ -1,7 +1,7 @@
 :root {
     --white: #fff;
     --black: rgb(1, 1, 30);
-    --gray: rgba(156, 150, 150,.7);
+    --gray: rgba(39, 38, 38, 0.7);
     --violet: rgb(206, 129, 205);
     --blue: #2e2cb9;
     --lightBlue: #615ef8;
@@ -68,7 +68,7 @@ section,footer {
     }
 }
 .nav-wrapper,
-.header-content,
+.header-wrapper,
 .section-wrapper,
 .footer-wrapper {
     width: 100%;
@@ -126,7 +126,163 @@ nav .logo {
 nav .logo span {
     color: var(--black);
 }
+.menu-btn {
+    display: none;
+}
 /* end of nav */
+/* header */
+header {
+    margin-top: 50px;
+    padding: 4rem;
+    background: url(../img/pup3.jpg);
+    background-color: rgba(0, 0, 0,.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+.header-wrapper .content-box {
+    max-width: 400px;
+    margin-left: auto!important;
+    padding: 4rem;
+}
+.header-wrapper .content-box h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.header-wrapper .content-box h4 {
+    text-transform: capitalize;
+    color: var(--white);
+    margin-top: 1rem;
+}
+.header-wrapper .content-box h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-weight: normal;
+}
+.header-wrapper .content-box h1 span {
+    color: var(--blue);
+    font-family: cursive, Tahoma,Verdana, sans-serif;
+}
+/* end of header */
+/* about section */
+.about .about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+.about-wrapper h3,
+.about-wrapper h2 {
+    text-align: center; 
+    margin-bottom: 1rem; 
+}
+.about-wrapper h3 {
+    font-weight: normal;
+}
+.about-wrapper h2 {
+    color: var(--blue);
+}
+.about-wrapper h2 span {
+    font-weight: normal;
+    color: var(--black);
+}
+.about-wrapper p {
+    font-size: 1.7rem;
+    color: var(--gray);
+}
+.about-wrapper .img-box {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.about-wrapper .img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+/* end of about section */
+/* hero section */
+.hero h2 {
+    font-weight: normal;
+    margin-bottom: 4rem;
+}
+.hero h2 span {
+    color: var(--black);
+    font-weight: bold;
+}
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-wrapper h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--blue);
+}
+.hero-wrapper p {
+    color: var(--gray);
+    font-size: 1.7rem;
+}
+.hero-wrapper .hero-1,
+.hero-wrapper .hero-2 {
+    align-self: flex-start;
+    flex: 2;
+}
+.hero-wrapper .img-box {
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    flex: 1;
+}
+.hero-wrapper .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+/* end of hero section */
+/* contact */
+.contact-wrapper {
+    padding: 2rem 0;
+}
+.contact-wrapper form {
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    border-radius: 6px;
+}
+.contact-wrapper form input:not([type="submit"]),
+.contact-wrapper form textarea {
+    padding: 1rem;
+    border: 1px solid var(--gray);
+    margin-bottom: 0.5rem;
+}
+.contact-wrapper .submit {
+    padding: .5rem 1rem;
+    width: 50%;
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+}
+/* end of contact */
 /* footer */
 footer {
     background: var(--violet);
@@ -177,6 +333,16 @@ footer {
 }
 .outro a {
     color: var(--white);
+    margin-left: 1rem;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    -ms-transition: .4s;
+}
+.outro a:hover,
+.outro a:focus {
+    color: var(--lightBlue);
 }
 /* end of footer */
 
