@@ -5,11 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Puppies friends site ">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'js/all.js' %}">
+    <title>Puppies' friends</title>
 </head>
 <body>
+    <!-- nav -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#n" class="logo">Puppies'<span>Friends</span></a>
+            <ul class="nav-list">
+                <li>
+                    <a href="#" class="highlight">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#services">Available puppies</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- end of nav -->
     {% block content %}
     {% endblock %}
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <h4 class="title">puppies's friends</h4>
+                <div class="loc">
+                    <i class="fas fa-map-marker"></i>
+                    <p>1002 ghana, legon</p>
+                </div>
+                <p class="pup">puppies' friends are the best</p>
+                <div class="cont">
+                    <i class="fas fa-phone"></i>
+                    <p>+233 244 4444 44</p>
+                </div>
+                <div class="social-box">
+                    <a href="#face">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#insta">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="outro">
+        <div class="footer-wrapper">
+            <p>puppies's friend inc. &copy; 2023</p>
+            <div class="link-box">
+                <a href="#n">terms of use</a>
+                <a href="#n">privacy policy</a>
+            </div>
+        </div>
+    </div>
+    <!-- end of footer -->
 </body>
 </html>
