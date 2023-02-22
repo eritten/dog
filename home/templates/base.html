@@ -8,7 +8,7 @@
     <meta name="description" content="Puppies friends site ">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
-    <link rel="stylesheet" href="{% static 'js/all.js' %}">
+    <script src="{% static 'js/all.js' %}"></script>
     <title>Puppies' friends</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
             <a href="#n" class="logo">Puppies'<span>Friends</span></a>
             <ul class="nav-list">
                 <li>
-                    <a href="#" class="highlight">Home</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
                     <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#services">Available puppies</a>
+                    <a href="#puppies">Available puppies</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
@@ -37,6 +37,25 @@
         </div>
     </nav>
     <!-- end of nav -->
+    <!-- mobile nav -->
+    <ul class="mobile-nav">
+        <button class="close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#puppies">Available puppies</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+    <!-- end of mobile nav -->
     {% block content %}
     {% endblock %}
     <!-- footer -->
@@ -54,10 +73,10 @@
                     <p>+233 244 4444 44</p>
                 </div>
                 <div class="social-box">
-                    <a href="#face">
-                        <i class="fab fa-facebook"></i>
+                    <a href="#face" data-aos="fade-down" data-aos-delay="200">
+                        <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#insta">
+                    <a href="#insta" data-aos="fade-down" data-aos-delay="300">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -66,7 +85,7 @@
     </footer>
     <div class="outro">
         <div class="footer-wrapper">
-            <p>puppies's friend inc. &copy; 2023</p>
+            <p>puppies's friend inc. &copy; 2023 powered by sewonet company</p>
             <div class="link-box">
                 <a href="#n">terms of use</a>
                 <a href="#n">privacy policy</a>

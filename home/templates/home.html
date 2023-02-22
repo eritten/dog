@@ -4,11 +4,11 @@
 <!-- header -->
 <header>
     <div class="header-wrapper">
-        <div class="content-box">
+        <div class="content-box" data-aos="fade-left">
             <h1>welcome to puppies's friends</h1>
             <h4>want a puppy to play with?</h4>
             <h1>find your <span>perfect</span> puppy</h1>
-            <a href="#N">Available puppies</a>
+            <a href="#puppies">Available puppies</a>
         </div>
     </div>
 </header>
@@ -17,7 +17,7 @@
 <section class="about" id="about">
     <div class="section-wrapper">
         <div class="about-wrapper">
-            <div class="content-box">
+            <div class="content-box" data-aos="fade-left">
                 <h3>visit us today!</h3>
                 <h2>Puppies's Friends <span>are the best</span> </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus itaque deserunt sequi culpa, illum, modi nihil voluptates quas quo obcaecati magni laboriosam minima aut, reiciendis esse saepe illo officia quibusdam!</p>
@@ -25,19 +25,27 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maiores omnis doloribus repellendus voluptates deserunt fugit quis? Itaque, deleniti recusandae.</p>
                 
             </div>
-            <div class="img-box">
+            <div class="img-box" data-aos="fade-right">
                 <img src="{% static 'img/pup4.jpg' %}" alt="a happy dog">
             </div>
         </div>
     </div>
 </section>
 <!-- end of about section -->
+<!-- puppies section -->
+<div class="puppies" id="puppies">
+    <div class="puppies-grid">
+        <!-- start of puppy box -->
+        <!-- end of puppy box -->
+    </div>
+</div>
+<!-- end of puppies section -->
 <!-- hero section -->
 <section class="hero">
     <div class="section-wrapper">
-        <h2><span>Puppies' Friends</span> Make a difference</h2>
+        <h2 data-aos="fade-up"><span>Puppies' Friends</span> Make a difference</h2>
         <div class="hero-wrapper">
-            <div class="hero-1">
+            <div class="hero-1" data-aos="zoom-out">
                 <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima doloribus asperiores et atque neque ducimus quae aliquam aut odit, ipsam minus, facere voluptatem.</p>
                 <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
@@ -45,10 +53,10 @@
                 <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima doloribus asperiores et atque neque ducimus quae aliquam aut odit, ipsam minus, facere voluptatem.</p>
             </div>
-            <div class="img-box">
+            <div class="img-box" data-aos="zoom-in">
                 <img src="{% static 'img/pup2.jpg' %}" alt="a beautiful brown puppy">
             </div>
-            <div class="hero-2">
+            <div class="hero-2" data-aos="zoom-out">
                 <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima doloribus asperiores et atque neque ducimus quae aliquam aut odit, ipsam minus, facere voluptatem.</p>
                 <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
@@ -59,20 +67,20 @@
 </section>
 <!-- end of hero section -->
 <!-- contact section -->
-<div class="contact" id="contact">
+<section class="contact" id="contact">
     <div class="section-wrapper">
-        <h2>contact us</h2>
+        <h2 data-aos="fade-up">contact us</h2>
         <p>We would love to hear from you. Leave us a mail and we will get back to you.</p>
-        <div class="contact-wrapper">
+        <div class="contact-wrapper" data-aos="fade-up">
             <form action="#n" class="contact-form">
-                <input type="text" placeholder="Your name">
-                <input type="email" placeholder="Your email">
-                <input type="tel" placeholder="Your phone number">
-                <textarea cols="30" rows="10" placeholder="Your message" maxlength="352"></textarea>
-                <input type="submit" class="submit" value="send">
+                <input type="text" placeholder="Your name" data-aos="fade-up" data-aos-delay="200">
+                <input type="email" placeholder="Your email" data-aos="fade-up" data-aos-delay="300">
+                <input type="tel" placeholder="Your phone number" data-aos="fade-up" data-aos-delay="400">
+                <textarea cols="30" rows="10" placeholder="Your message" maxlength="352" data-aos="fade-up" data-aos-delay="500"></textarea>
+                <input type="submit" class="submit" value="send" data-aos="fade-up" data-aos-delay="600">
             </form>
         </div>
     </div>
-</div>
+</section>
 <!-- end of contact section -->
 {% endblock %}
