@@ -5,24 +5,10 @@
 <header>
     <div class="header-wrapper">
         <div class="content-box" data-aos="fade-left">
-            <h1>welcome to puppies's friends</h1>
-            <h4>want a puppy to play with?</h4>
+            <h1>Welcome to Puppies Friends website!</h1>
+            <h4>We're excited to have you here and show you our adorable and loving puppies.</h4>
             <h1>find your <span>perfect</span> puppy</h1>
-<<<<<<< HEAD
-            <a href="#N">Available puppies</a>
-<br/>
-{% for dog in page_obj  %}
-<h1><a href="{{ dog.get_absolute_url }}"> {{dog.name}}</a></h1>
-<p>{{dog.age}}</p>
-<img src={{dog.image.url}}" />
-
-{% endfor %}
-<br/>
-  {% include "pagination.html" with page=page_obj %}		
-<br/>
-=======
             <a href="#puppies">Available puppies</a>
->>>>>>> 353b2efd2b65aa86bad72214e53a3a3908ee9441
         </div>
     </div>
 </header>
@@ -34,9 +20,9 @@
             <div class="content-box" data-aos="fade-left">
                 <h3>visit us today!</h3>
                 <h2>Puppies's Friends <span>are the best</span> </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus itaque deserunt sequi culpa, illum, modi nihil voluptates quas quo obcaecati magni laboriosam minima aut, reiciendis esse saepe illo officia quibusdam!</p>
+                <p>Welcome to our puppies website! We're thrilled to introduce you to our furry friends, who are all looking for their forever homes. Our puppies come from a variety of breeds, and we take pride in ensuring that each one is healthy, happy, and ready to join a loving family. From the tiny Chihuahua to the majestic Great Dane, we have a wide range of breeds to choose from.</p>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maiores omnis doloribus repellendus voluptates deserunt fugit quis? Itaque, deleniti recusandae.</p>
+                <p>Each of our puppies has a unique personality, and we provide as much information about each one as possible to help you choose the perfect match for your home. We include details about their breed, age and images of them.</p>
                 
             </div>
             <div class="img-box" data-aos="fade-right">
@@ -50,6 +36,16 @@
 <div class="puppies" id="puppies">
     <div class="puppies-grid">
         <!-- start of puppy box -->
+        <br/>
+    {% for dog in page_obj  %}
+    <h1><a href="{{ dog.get_absolute_url }}"> {{dog.name}}</a></h1>
+    <p>{{dog.age}}</p>
+    <img src="{{dog.image.url}}" />
+
+    {% endfor %}
+    <br/>
+    {% include "pagination.html" with page=page_obj %}		
+    <br/>
         <!-- end of puppy box -->
     </div>
 </div>
@@ -60,21 +56,19 @@
         <h2 data-aos="fade-up"><span>Puppies' Friends</span> Make a difference</h2>
         <div class="hero-wrapper">
             <div class="hero-1" data-aos="zoom-out">
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima doloribus asperiores et atque neque ducimus quae aliquam aut odit, ipsam minus, facere voluptatem.</p>
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima.</p>
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima doloribus asperiores et atque neque ducimus quae aliquam aut odit, ipsam minus, facere voluptatem.</p>
+                <h4>Find your perfect match</h4>
+                <p>We understand the joy and companionship that puppies can bring to our lives, and we're here to help you find your perfect match. Whether you're looking for a loyal companion or a playful friend, we've got you covered.</p>
+                <h4>Put on a smiley face as you got a companion</h4>
+                <p>We know that sometimes life can be challenging, and puppies have a unique way of bringing a smile to our faces and lifting our spirits. That's why we're dedicated to connecting our loving puppies with people who need a little extra love and joy in their lives. Our goal is to help you find your perfect furry friend who will bring a smile to your face and brighten up your day.</p>
             </div>
             <div class="img-box" data-aos="zoom-in">
                 <img src="{% static 'img/pup2.jpg' %}" alt="a beautiful brown puppy">
             </div>
             <div class="hero-2" data-aos="zoom-out">
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima doloribus asperiores et atque neque ducimus quae aliquam aut odit, ipsam minus, facere voluptatem.</p>
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, harum?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid assumenda, soluta exercitationem harum eius minima.</p>
+                <h4>Healthy puppies for you always</h4>
+                <p>We're proud of the work we do to ensure that all of our puppies are healthy, happy, and well-cared for. We believe that every puppy deserves a loving home and we take great care to ensure that each of our furry friends finds their perfect forever home. We know that adopting a puppy can be a big responsibility, but we're here to support you every step of the way.</p>
+                <h4>We appreciate you for visiting us</h4>
+                <p>Thank you for visiting our website, and we hope that you find your perfect furry companion. Remember, a puppy's love is unconditional, and they will always be there to greet you with a wagging tail and a wet nose. So, take a moment to browse through our puppies and find the one that captures your heart. We </p>
             </div>
         </div>
     </div>

@@ -244,6 +244,9 @@ header {
     font-family: cursive, Tahoma,Verdana, sans-serif;
 }
 @media (max-width: 768px) {
+    header {
+        margin-top: 35px;
+    }
     .header-wrapper .content-box {
         width: 100%;
         margin-right: auto;
