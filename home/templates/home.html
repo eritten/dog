@@ -9,6 +9,16 @@
             <h4>want a puppy to play with?</h4>
             <h1>find your <span>perfect</span> puppy</h1>
             <a href="#N">Available puppies</a>
+<br/>
+{% for dog in page_obj  %}
+<h1><a href="{{ dog.get_absolute_url }}"> {{dog.name}}</a></h1>
+<p>{{dog.age}}</p>
+<img src={{dog.image.url}}" />
+
+{% endfor %}
+<br/>
+  {% include "pagination.html" with page=page_obj %}		
+<br/>
         </div>
     </div>
 </header>

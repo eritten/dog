@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load tag %}
+{% block title %}
+{{dog.name}}
+{% endblock %}
+{% block content %}
+{{dog.name}}
+{{dog.age}}
+Description read time: {{dog.description|read_time }}
+{{dog.description  }}
+{% endblock %}

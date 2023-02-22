@@ -4,20 +4,29 @@ from django.core.mail import send_mail
 from .models import Dog
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    dogs = Dog.objects.all()
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        content = request.POST.get("content")
+        telephone_number = request.POST.get("telephone_number")
+        send_mail(f"{name} contacting", content + "\r" + telephone_number, email, [], fail_silently=True)
+    dogs = Paginator(dogs, 20)
+    page = request.GET.get("page")
+    page_obj = dogs.get_page(page)
+    return render(request, 'home.html', {"page_obj": page_obj, "dogs":dogs})
 
 def detail(request, pk, name):
     dog = get_object_or_404(Dog, pk=pk, name=name)
-    return render(request, 'detail.html', {'dog', dog})
-@api_view(["POST"])
-def contact(request):
-    name = request.data.get("name")
-    email = request.data.get("email")
-    content = request.data.get("content")
-    telephone_number = request.data.get("telephone_number")
-    send_mail()
-    return Response({"status": "sent"})
+    return render(request, 'detail.html', {'dog': dog})
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+def terms(request):
+    return render(request, 'terms.html')
