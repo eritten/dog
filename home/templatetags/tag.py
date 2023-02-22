@@ -2,6 +2,8 @@ from django import template
 import timeago, datetime, pytz
 from ..models import Dog
 from django.db.models import Count
+import markdown
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 import readtime
