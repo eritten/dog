@@ -129,13 +129,80 @@ nav .logo span {
 .menu-btn {
     display: none;
 }
+.mobile-nav {
+    display: none;
+}
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+    nav .logo {
+        font-size: 1.8rem;
+    }
+    .nav-wrapper .nav-list {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+        padding: 1rem;
+        color: var(--blue);
+        background: none;
+        font-size: 20px;
+    }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 100000000000;
+        background: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+        -ms-transition: .4s;
+        transform: translateX(100%);
+    }
+    .mobile-nav.active {
+        transform: translateX(0%);
+    }
+    .mobile-nav .close-btn {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        font-size: 4rem;
+        background: none;
+        color: var(--blue);
+    }
+    .mobile-nav a {
+        font-size: 3rem;
+        text-transform: uppercase;
+        transition: .4s;
+        color: var(--blue);
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+        -ms-transition: .4s;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+        color: var(--blue);
+        font-weight: bold;
+    }
+}
 /* end of nav */
 /* header */
 header {
     margin-top: 50px;
     padding: 4rem;
     background: url(../img/pup3.jpg);
-    background-color: rgba(0, 0, 0,.4);
+    background-color: rgba(0, 0, 0,.5);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -157,15 +224,31 @@ header {
     color: var(--white);
     margin-top: 1rem;
 }
+.header-wrapper .content-box a {
+    color: var(--white);
+    background: var(--blue);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .header-wrapper .content-box h1 {
     color: var(--white);
     text-transform: uppercase;
     margin-top: 1rem;
     font-weight: normal;
+    margin-bottom: 1rem;
 }
 .header-wrapper .content-box h1 span {
     color: var(--blue);
     font-family: cursive, Tahoma,Verdana, sans-serif;
+}
+@media (max-width: 768px) {
+    .header-wrapper .content-box {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 /* end of header */
 /* about section */
@@ -204,8 +287,21 @@ header {
     border-radius: 20px;
     object-fit: cover;
 }
+@media (max-width: 768px) {
+    .about .about-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .about-wrapper .img-box {
+        max-width: 80%;
+        height: auto;
+    }
+}
 /* end of about section */
 /* hero section */
+.hero {
+    background: rgba(128, 128, 128, .1);
+}
 .hero h2 {
     font-weight: normal;
     margin-bottom: 4rem;
@@ -250,10 +346,23 @@ header {
     border-radius: 50%;
 
 }
+@media (max-width: 768px) {
+    .hero-wrapper {
+        flex-direction: column;
+    }
+}
 /* end of hero section */
 /* contact */
 .contact-wrapper {
     padding: 2rem 0;
+}
+.contact h2 {
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.contact p {
+    color: var(--blue);
 }
 .contact-wrapper form {
     box-shadow: var(--box-shadow);
@@ -282,6 +391,11 @@ header {
     border-radius: 6px;
     box-shadow: var(--box-shadow);
 }
+@media (max-width: 480px) {
+    .contact-wrapper form {
+        width: 100%;
+    }
+}
 /* end of contact */
 /* footer */
 footer {
@@ -303,6 +417,10 @@ footer {
     margin-top: 1rem;
 }
 .footer-info .social-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
     margin-right: 1rem;
     height: 40px;
     width: 40px;
@@ -343,6 +461,11 @@ footer {
 .outro a:hover,
 .outro a:focus {
     color: var(--lightBlue);
+}
+@media (max-width: 768px) {
+    .outro {
+        font-size: 1.6rem;
+    }
 }
 /* end of footer */
 
