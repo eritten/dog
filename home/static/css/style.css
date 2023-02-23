@@ -252,8 +252,15 @@ header {
     }
     .header-wrapper .content-box {
         width: 100%;
+        max-width: none;
+        padding: 1rem;
         margin-right: auto;
         margin-left: auto;
+    }
+}
+@media (max-width: 480px) {
+    .header-wrapper .content-box a {
+        font-size: 1.2rem;
     }
 }
 /* end of header */
@@ -301,6 +308,17 @@ header {
     .about-wrapper .img-box {
         max-width: 80%;
         height: auto;
+    }
+}
+@media (max-width: 480px) {
+    .about-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    .about-wrapper p {
+        font-size: 1.5rem;
+    }
+    .about-wrapper .img-box {
+        display: none;
     }
 }
 /* end of about section */
@@ -357,6 +375,14 @@ header {
         flex-direction: column;
     }
 }
+@media (max-width: 480px) {
+    .hero-wrapper .img-box {
+        width: 100px;
+    }
+    .hero-wrapper p {
+        font-size: 1.5rem;
+    }
+}
 /* end of hero section */
 /* contact */
 .contact-wrapper {
@@ -400,6 +426,7 @@ header {
 @media (max-width: 480px) {
     .contact-wrapper form {
         width: 100%;
+        max-width: none;
     }
 }
 /* end of contact */
@@ -501,6 +528,11 @@ footer {
 @media (max-width: 768px) {
     .outro {
         font-size: 1.6rem;
+    }
+}
+@media (max-width: 480px) {
+    .outro .footer-wrapper {
+        font-size: 1.2rem;
     }
 }
 /* end of footer */
