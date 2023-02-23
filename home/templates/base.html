@@ -8,22 +8,17 @@
     <meta name="description" content="Puppies friends site ">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="{% static 'js/all.js' %}">
-    <title>Puppies' friends {% block title %} {% endblock %}</title>
-=======
     <script src="{% static 'js/all.js' %}"></script>
-    <title>Puppies' friends</title>
->>>>>>> 353b2efd2b65aa86bad72214e53a3a3908ee9441
+    <title>Puppies' friends {% block title %} {% endblock %}</title>
 </head>
 <body>
     <!-- nav -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#n" class="logo">Puppies'<span>Friends</span></a>
+            <a href="{% url 'home' %}" class="logo">Puppies'<span>Friends</span></a>
             <ul class="nav-list">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{% url 'home' %}">Home</a>
                 </li>
                 <li>
                     <a href="#about">About</a>
@@ -48,7 +43,7 @@
             <i class="fas fa-times"></i>
         </button>
         <li>
-            <a href="#">Home</a>
+            <a href="{% url 'home' %}">Home</a>
         </li>
         <li>
             <a href="#about">About</a>
@@ -92,8 +87,8 @@
         <div class="footer-wrapper">
             <p>puppies's friend inc. &copy; 2023 powered by sewonet company</p>
             <div class="link-box">
-                <a href="#n">terms of use</a>
-                <a href="#n">privacy policy</a>
+                <a href="{% url 'terms' %}">terms of use</a>
+                <a href="{% url 'privacy' %}">privacy policy</a>
             </div>
         </div>
     </div>

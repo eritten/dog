@@ -179,6 +179,9 @@ nav .logo span {
         font-size: 4rem;
         background: none;
         color: var(--blue);
+        z-index: 1000000000000;
+        padding: 1rem;
+
     }
     .mobile-nav a {
         font-size: 3rem;
@@ -400,6 +403,36 @@ header {
     }
 }
 /* end of contact */
+/* privacy and terms */
+.terms,.privacy {
+    padding-top: 8rem;
+}
+.terms .section-wrapper,.privacy .section-wrapper {
+    padding-top: 2rem;
+}
+.terms .title,.privacy .title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-bottom: 2rem;
+}
+.terms h4,.privacy h4 {
+    color: var(--blue);
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.terms ul, .privacy ul {
+    padding: 2rem;
+    list-style-type: disc;
+}
+.terms li, .privacy li {
+    margin-bottom: 0.5rem;
+}
+/* end of privacy and terms */
 /* footer */
 footer {
     background: var(--violet);
