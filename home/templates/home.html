@@ -34,21 +34,32 @@
 <!-- end of about section -->
 <!-- puppies section -->
 <div class="puppies" id="puppies">
+    <h2 class="avail">Available puppies</h2>
     <div class="puppies-grid">
         <!-- start of puppy box -->
-        <br/>
     {% for dog in page_obj  %}
+<<<<<<< HEAD
     <h1><a href="{{ dog.get_absolute_url }}"> {{dog.name}}</a></h1>
     <p>Age: {{dog.age}}</p>
     <p>Breed:: {{dog.breed}}</p>
     <img src="{{dog.picture.url}}" />
 
+=======
+        <a href="{{ dog.get_absolute_url }}" class="puppy-box" aria-label="Dog name is {{dog.name}}. It is {{dog.age}} years old and is {{dog.breed}} breed." data-aos="fade-up">
+            <img src="{{dog.picture.url}}" />
+            <div class="info-box">
+                <h4 class="name">{{dog.name}}</h4>
+                <h5 class="age">{{dog.age}} year(s) old</h5>
+                <p class="breed">Breed: {{dog.breed}}</p>
+            </div>
+        </a>
+>>>>>>> e9758292d46bdba78ec106703c1a00e231e1acba
     {% endfor %}
-    <br/>
-    {% include "pagination.html" with page=page_obj %}		
-    <br/>
-        <!-- end of puppy box -->
+    <!-- end of puppy box -->
     </div>
+<br/>
+{% include "pagination.html" with page=page_obj %}
+		
 </div>
 <!-- end of puppies section -->
 <!-- hero section -->

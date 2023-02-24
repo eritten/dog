@@ -4,9 +4,30 @@
 {{dog.name}}
 {% endblock %}
 {% block content %}
+<<<<<<< HEAD
 {{dog.name}}
 <img src="{{dog.picture.url}}" />
 {{dog.age}}
 Description read time: {{dog.description|read_time }}
 {{ dog.description|markdown  }}
+=======
+<!-- detail section -->
+<section class="detail">
+    <div class="section-wrapper">
+        <div class="detail-wrapper">
+            <div class="img-box">
+                <img src="{{dog.picture.url}}" alt="{{dog.name}}'s  picture">
+            </div>
+            <h2 class="name">{{dog.name}}</h2>
+            <h5 class="age">{{dog.age}} year(s) old</h5>
+            <p class="breed">Breed: {{dog.breed}}</p>
+            <p class="read-time">Description read time: {{dog.description|read_time }}</p>
+            <p class="description">{{ dog.description|markdown  }}</p>
+        </div>
+    </div>
+</section>
+<!-- end of detail section -->
+
+
+>>>>>>> e9758292d46bdba78ec106703c1a00e231e1acba
 {% endblock %}
