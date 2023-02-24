@@ -5,6 +5,7 @@
 {% endblock %}
 {% block content %}
 {{dog.name}}
+<img src="{{dog.picture.url}}" />
 {{dog.age}}
 Description read time: {{dog.description|read_time }}
 {{ dog.description|markdown  }}

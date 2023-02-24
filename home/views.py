@@ -16,6 +16,7 @@ def home(request):
         content = request.POST.get("content")
         telephone_number = request.POST.get("telephone_number")
         send_mail(f"{name} contacting", content + "\r" + telephone_number, email, [], fail_silently=True)
+        messages.success(request, "Thank you for contacting Us")
     dogs = Paginator(dogs, 20)
     page = request.GET.get("page")
     page_obj = dogs.get_page(page)

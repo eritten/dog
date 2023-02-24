@@ -39,7 +39,7 @@
         <br/>
     {% for dog in page_obj  %}
     <h1><a href="{{ dog.get_absolute_url }}"> {{dog.name}}</a></h1>
-    <p>Age: {{dog.age}} years old</p>
+    <p>Age: {{dog.age}}</p>
     <p>Breed:: {{dog.breed}}</p>
     <img src="{{dog.picture.url}}" />
 

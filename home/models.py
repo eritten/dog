@@ -8,7 +8,7 @@ from markdownfield.validators import VALIDATOR_STANDARD
 
 class Dog(models.Model):
     name = models.CharField(max_length=100)
-    age =models.PositiveIntegerField()
+    age =models.CharField(max_length=300)
     picture = models.ImageField(upload_to="images")
     description = MarkdownField(rendered_field='text_rendered', validator=VALIDATOR_STANDARD)
     text_rendered = RenderedMarkdownField()
