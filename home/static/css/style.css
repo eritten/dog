@@ -186,8 +186,8 @@ nav .logo span {
     .mobile-nav a {
         font-size: 3rem;
         text-transform: uppercase;
-        transition: .4s;
         color: var(--blue);
+        transition: .4s;
         -webkit-transition: .4s;
         -moz-transition: .4s;
         -o-transition: .4s;
@@ -460,6 +460,134 @@ header {
     margin-bottom: 0.5rem;
 }
 /* end of privacy and terms */
+/* available puppies */
+.puppies {
+    width: 100%;
+}
+.puppies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.puppy-box {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.puppy-box:focus {
+    outline: none;
+    border: none;
+}
+.avail {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+.puppy-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.puppy-box:hover .info-box,
+.puppy-box:focus .info-box {
+    top: 50%;    
+}
+.puppy-box .info-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: .5rem;
+    background: var(--white);
+    border: 1px solid var(--blue);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    -ms-transition: .4s;
+}
+.puppy-box .info-box .name {
+    color: var(--black);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+.puppy-box .age {
+    margin-bottom: 1rem;
+    color: var(--blue);
+}
+.puppy-box .breed {
+    color: var(--lightBlue);
+}
+.puppy-box .breed,
+.puppy-box .age {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+@media (max-width: 768px) {
+    .puppies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .puppy-box {
+        height: 200px;
+    }
+}
+@media (max-width: 480px) {
+    .puppies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .puppy-box {
+        height: 200px;
+    }
+}
+/* end of available puppies */
+/* detail section */
+.detail {
+    padding-top: 10rem;
+    min-height: 80vh;
+}
+.detail .img-box {
+    width: 40rem;
+    height: 35rem;
+}
+.detail .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detail .name {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--black);
+}
+.detail .age ,
+.detail .breed {
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+.description {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+}
+@media (max-width: 768px) {
+    .detail .img-box {
+        width: 100%;
+        height: 40rem;
+    }
+}
+/* end of detail section */
 /* footer */
 footer {
     background: var(--violet);
